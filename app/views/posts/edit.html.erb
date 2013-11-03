@@ -1,0 +1,20 @@
+
+
+<%= form_tag post_url(@post.id), method: 'patch' do %>
+
+<h4><%= label_tag 'title', "Title:"  %>
+<%= text_field_tag 'title', @post.title, size: 100 %></h4>
+
+<h4><%= label_tag 'subtitle', "Subtitle:"  %>
+<%= text_field_tag 'subtitle', @post.subtitle, size: 100 %></h4>
+
+<h4><%= label_tag 'datetime', "Date:"  %>
+<%= date_field_tag 'datetime', @post.date %></h4>
+
+<h4><%= label_tag 'content', "Blogpost:"  %></h4>
+<%= text_area_tag 'content', @post.content, size: "80x20" %>
+<br>
+<%= submit_tag "Update!" %>
+
+
+<% end %>

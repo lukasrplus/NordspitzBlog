@@ -1,0 +1,19 @@
+
+<%= form_tag posts_url, method: 'post' do %>
+
+<h4><%= label_tag 'title', "Title:"  %>
+<%= text_field_tag 'title', nil, placeholder: "Enter blogpost here..", size: 100 %></h4>
+
+<h4><%= label_tag 'subtitle', "Subtitle:"  %>
+<%= text_field_tag 'subtitle', nil, placeholder: "Your subtitle goes here...", size: 100 %></h4>
+
+<h4><%= label_tag 'datetime', "Date:"  %>
+<%= date_field_tag 'datetime' %></h4>
+
+<h4><%= label_tag 'content', "Blogpost:"  %></h4>
+<%= text_area_tag 'content', nil, size: "80x20" %>
+<br>
+<%= submit_tag "Post!" %>
+
+
+<% end %>

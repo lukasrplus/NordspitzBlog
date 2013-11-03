@@ -1,0 +1,9 @@
+
+
+<p><%= link_to "Add new post", new_post_url %></p>
+
+<% @posts.each do |post| %>
+<h3><%= link_to post.title, post_url(post.id) %></h3>
+<h4><%= post.subtitle %></h4>
+<% end  %>
+
